@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kisa
+  name: kiev
+spec:
+  containers:
+  - image: vaheguru/ginger:v1
+    name: kiev
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
