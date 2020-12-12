@@ -1,9 +1,9 @@
 FROM golang:1.14-alpine AS build
 RUN apk add git
+RUN git clone https://github.com/Vaheguru/Vjoon.git
+RUN cd vjoon
 
-
-WORKDIR /src/
-COPY main.go go.* /src/
+WORKDIR ./vjoon
 RUN CGO_ENABLED=0 go build -o /bin/demo
 
 FROM scratch
